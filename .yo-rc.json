@@ -1,0 +1,57 @@
+{
+  "generator-jhipster": {
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "clientFramework": "angularX",
+    "serverPort": "8080",
+    "serviceDiscoveryType": false,
+    "skipUserManagement": false,
+    "withAdminUi": true,
+    "baseName": "compositekey",
+    "buildTool": "gradle",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "enableHibernateCache": true,
+    "enableSwaggerCodegen": false,
+    "enableTranslation": true,
+    "jhiPrefix": "jhi",
+    "languages": ["en"],
+    "messageBroker": false,
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "skipClient": false,
+    "testFrameworks": ["protractor"],
+    "websocket": false,
+    "applicationType": "monolith",
+    "jhipsterVersion": "6.10.5",
+    "skipServer": false,
+    "packageFolder": "com/mycompany/myapp",
+    "packageName": "com.mycompany.myapp",
+    "clientPackageManager": "npm",
+    "dtoSuffix": "DTO",
+    "entitySuffix": "",
+    "reactive": false,
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "entities": ["Employee", "EmployeeSkill"],
+    "skipCheckLengthOfIdentifier": false,
+    "skipFakeData": false,
+    "blueprints": [
+      {
+        "name": "generator-jhipster-primeng-blueprint",
+        "version": "6.8.3"
+      }
+    ],
+    "otherModules": [
+      {
+        "name": "generator-jhipster-primeng-blueprint",
+        "version": "6.8.3"
+      }
+    ],
+    "pages": [],
+    "nativeLanguage": "en",
+    "creationTimestamp": 1612515159332,
+    "jwtSecretKey": "OGIyNDcxOTc4NWU1ZjJiMjRkODQ1NjQzMTFlZGQ3OGJjZTllYWNmZTA3OTVhMTRjZmJmMTY1M2I3MDlmNzQ5ZDg0NzFiMjdhZTc3NTcyZjY4ZWFkY2VhYjJlYTAwMDVlYWEwYzYwMmFmZWY5M2Q4M2EzOGI5YmQ3YmUwN2Y0ZTM=",
+    "lastLiquibaseTimestamp": 1612515279000
+  }
+}

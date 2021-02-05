@@ -1,0 +1,39 @@
+application {
+  config {
+    baseName compositekey
+    applicationType monolith
+    prodDatabaseType postgresql
+    buildTool gradle
+    testFrameworks [protractor]
+  }
+  entities *
+}
+
+entity Employee{
+	@id username String required
+	fullname String required
+}
+
+relationship OneToMany{
+	Employee{teamMember(fullname)} to Employee{manager(fullname)}
+}
+
+entity EmployeeSkill{
+	// compositeId employeeSkill.name, employee.id
+	@id name String required
+	level Integer required
+}
+
+relationship OneToMany{
+	@id Employee{skill(name)} to EmployeeSkill{employee(fullname) required}
+}
+
+//double OneToMany to check double imports, variables names...
+relationship OneToMany {
+    Employee{taughtSkill(name)} to EmployeeSkill{teacher(fullname) required}
+}
+
+dto * with mapstruct
+service * with serviceImpl
+filter *
+paginate Employee, EmployeeSkill with pagination
